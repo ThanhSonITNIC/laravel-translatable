@@ -224,4 +224,9 @@ trait HasTranslations
             array_fill_keys($this->getTranslatableAttributes(), 'array')
         );
     }
+
+    protected function asJson($value)
+    {
+        return json_encode($value, JSON_UNESCAPED_UNICODE);
+    }
 }
